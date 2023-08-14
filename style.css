@@ -1,0 +1,105 @@
+/* Resolution de problemes de taille des éléments */
+html {
+  box-sizing: border-box;
+  /* Typography */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* Abillage des éléments */
+  background-color: yellow;
+  gap: .5rem;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: .5rem;
+  padding: .5rem;
+}
+
+img {
+  width: 2rem;
+  height: auto;
+}
+
+/* Positionnement / Allignement */
+header,
+header ul,
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header {
+  justify-content: space-between;
+}
+.logo-wrapper {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0 .2rem;
+}
+
+main {
+  display: flex;
+  flex-flow: row-reverse wrap; /* flex-direction | flex-wrap */
+}
+article {
+  flex: 2 0rem; /* flex-grow | flex-shrink */
+  background: snow;
+  margin: .5rem;
+  padding: .5rem;
+}
+aside {
+  flex: .2 1 auto; /* flex-grow | flex-shrink | flex-basis */
+  background: snow;
+  margin: .5rem;
+  padding: .5rem;
+}
+
+section {
+  clear: both;
+}
+section img {
+  width: 50%;
+  max-width: 350px;
+  padding: .4rem;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+footer {
+  position: relative;
+  height: 200px;
+  background-color: black;
+  color: yellow;
+}
+footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+}
+.copyright {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.back-to-top {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
